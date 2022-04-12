@@ -26,7 +26,9 @@
           
           
           
-          <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          <td><%= button_to 'Delete',  
+          { controller: "friends", action: "destroy", id: friend.id }, data: { confirm: 'Are you sure?' }, 
+          method: :delete, class: "btn btn-outline-danger btn-sm" %></td>
           
         </tr>
       <% end %>
